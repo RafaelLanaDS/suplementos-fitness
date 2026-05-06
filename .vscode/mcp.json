@@ -1,15 +1,15 @@
-{
-  "servers": {
-    "Framelink MCP for Figma": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "figma-developer-mcp",
-        "--figma-api-key='${env:FIGMA_API_KEY}'",
-        "--stdio"
-      ]
-    }
-  }
-}
+// {
+//   "servers": {
+//     "Framelink MCP for Figma": {
+//       "command": "cmd",
+//       "args": [
+//         "/c",
+//         "npx",
+//         "-y",
+//         "figma-developer-mcp",
+//         "--figma-api-key=figd_lgJIF6DNKEPgg-xl_9Vjw7sMuyL8U5XEhwj7ipay",
+//         "--stdio"
+//       ]
+//     }
+//   }
+// }
