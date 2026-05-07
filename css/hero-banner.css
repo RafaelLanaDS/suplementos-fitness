@@ -1,0 +1,207 @@
+/*
+  Hero Banner Styles
+  ---------------------------
+  Full-viewport hero section with background image.
+  Text content on left side, athlete image on right.
+*/
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.hero-banner__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url('../../public/imagens/hero-section-bg-5f259e.png');
+  z-index: 0;
+}
+
+.hero-banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(19, 19, 19, 0.9) 0%, rgba(19, 19, 19, 0.6) 40%, rgba(19, 19, 19, 0.2) 70%, rgba(19, 19, 19, 0) 100%);
+  z-index: 1;
+}
+
+.hero-banner__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 60px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-banner__text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.hero-banner__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-transform: uppercase;
+  word-spacing: 100vw;
+}
+
+.hero-banner__description {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-light);
+  max-width: 380px;
+}
+
+.hero-banner__buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-banner__buttons .btn {
+  padding: 16px 32px;
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1440px) {
+  .hero-banner__content {
+    padding: 0 50px;
+    max-width: 55%;
+  }
+
+  .hero-banner__title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-banner {
+    height: auto;
+    min-height: 550px;
+  }
+
+  .hero-banner__content {
+    padding: 80px 50px;
+    max-width: 60%;
+  }
+
+  .hero-banner__title {
+    font-size: 2.5rem;
+  }
+
+  .hero-banner__description {
+    font-size: 0.9rem;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: auto;
+    min-height: 480px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .hero-banner__overlay {
+    background: rgba(19, 19, 19, 0.85);
+  }
+
+  .hero-banner__content {
+    padding: 70px 40px;
+    max-width: 100%;
+  }
+
+  .hero-banner__title {
+    font-size: 2rem;
+  }
+
+  .hero-banner__description {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .hero-banner__buttons .btn {
+    padding: 14px 28px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    min-height: 420px;
+  }
+
+  .hero-banner__content {
+    padding: 60px 20px;
+  }
+
+  .hero-badge {
+    font-size: 0.6rem;
+    padding: 6px 12px;
+  }
+
+  .hero-banner__title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .hero-banner__description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .hero-banner__buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-banner__buttons .btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.75rem;
+  }
+}
