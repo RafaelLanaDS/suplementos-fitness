@@ -1,0 +1,225 @@
+/*
+  Promotional Banners Section Styles
+  ---------------------------
+  Asymmetric grid layout with promotional category banners
+*/
+
+.promotional-banners {
+  width: 100%;
+  background: var(--bg-dark);
+  padding: 0;
+  overflow: hidden;
+}
+
+.promotional-banners__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0;
+  min-height: 500px;
+  max-width: 100%;
+}
+
+.promotional-banners__right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+}
+
+/* Banner Block Base Styles */
+.banner-block {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.banner-block--large {
+  grid-row: 1 / 3;
+}
+
+.banner-block--small {
+  min-height: 250px;
+}
+
+.banner-block__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.banner-block__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(19, 19, 19, 0.7) 0%, rgba(19, 19, 19, 0.4) 50%, rgba(19, 19, 19, 0) 100%);
+  z-index: 1;
+}
+
+.banner-block__content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.banner-block__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.banner-block--small .banner-block__title {
+  font-size: 1.1rem;
+}
+
+.banner-block__subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-light);
+  max-width: 280px;
+}
+
+.banner-block__link {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.banner-block__link span {
+  margin-left: 4px;
+}
+
+.banner-block__link:hover {
+  color: var(--accent-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .promotional-banners__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: auto;
+  }
+
+  .promotional-banners__right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+  }
+
+  .banner-block--large {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    min-height: 350px;
+  }
+
+  .banner-block--small {
+    min-height: 280px;
+  }
+
+  .banner-block__title {
+    font-size: 1.2rem;
+  }
+
+  .banner-block--small .banner-block__title {
+    font-size: 1rem;
+  }
+
+  .banner-block__content {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promotional-banners__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .promotional-banners__right {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-block--large {
+    grid-column: 1;
+    min-height: 300px;
+  }
+
+  .banner-block--small {
+    min-height: 250px;
+  }
+
+  .banner-block__title {
+    font-size: 1.1rem;
+  }
+
+  .banner-block--small .banner-block__title {
+    font-size: 0.95rem;
+  }
+
+  .banner-block__subtitle {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .banner-block__content {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotional-banners__container {
+    min-height: auto;
+  }
+
+  .banner-block--large,
+  .banner-block--small {
+    min-height: 240px;
+  }
+
+  .banner-block__title {
+    font-size: 0.95rem;
+  }
+
+  .banner-block--small .banner-block__title {
+    font-size: 0.85rem;
+  }
+
+  .banner-block__subtitle {
+    font-size: 0.75rem;
+  }
+
+  .banner-block__link {
+    font-size: 0.75rem;
+  }
+
+  .banner-block__content {
+    padding: 20px 16px;
+    gap: 8px;
+  }
+}
