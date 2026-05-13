@@ -75,6 +75,241 @@
   gap: 20px;
 }
 
+.newsletter {
+  width: 100%;
+  background: #141414;
+  padding: 72px 24px;
+  min-height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter__container {
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.newsletter__icon {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(227, 6, 19, 0.14);
+  color: var(--accent);
+}
+
+.newsletter__title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.newsletter__description {
+  max-width: 680px;
+  color: #c3c3c3;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.newsletter__form {
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter__input {
+  flex: 1 1 260px;
+  min-width: 200px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: #0f0f0f;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.newsletter__input::placeholder {
+  color: #7a7a7a;
+}
+
+.newsletter__button {
+  flex: 0 0 auto;
+  padding: 18px 28px;
+  min-width: 180px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.newsletter__privacy {
+  margin-top: 0;
+  color: #d9d9d9;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-transform: lowercase;
+}
+
+.site-footer {
+  width: 100%;
+  background: #000000;
+  padding: 64px 24px 32px;
+}
+
+.site-footer__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.footer-brand__title {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.footer-brand__description {
+  margin: 0 0 24px;
+  color: #E9BCB6;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  max-width: 520px;
+}
+
+.footer-brand__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-icon-btn {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 14px;
+  background: #151515;
+  color: #ffffff;
+}
+
+.footer-icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-column__label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+.footer-link {
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+
+.site-footer__legal {
+  max-width: 1280px;
+  margin: 40px auto 0;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-legal__text {
+  margin: 0;
+  color: #A5A5A5;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.footer-legal__payments {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-payment-icon {
+  width: 30px;
+  height: 20px;
+  display: inline-flex;
+  border-radius: 6px;
+  background: #141414;
+}
+
+@media (max-width: 1024px) {
+  .site-footer__inner {
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .site-footer__legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 48px 18px 24px;
+  }
+
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand__description {
+    max-width: 100%;
+  }
+
+  .site-footer__legal {
+    align-items: flex-start;
+  }
+}
+
 .category-item {
   display: flex;
   flex-direction: column;
